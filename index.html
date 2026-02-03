@@ -3,89 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SiriusXM Helpline - Call Toll-Free Support</title>
-  <meta name="description" content="Get help with SiriusXM subscription, account, or technical issues. Call our toll-free helpline to connect with live agents for support.">
+  <title>SiriusXM Helpline - Toll-Free Support</title>
+  <meta name="description" content="Connect with SiriusXM support for account help, activation, billing, and more. Call our toll-free helpline for live assistance.">
   <style>
+    :root {
+      --primary-blue: #0000EB;   /* Official SiriusXM blue from brand assets */
+      --dark-blue: #001f3f;      /* Deeper navy for accents */
+      --black: #000000;
+      --white: #FFFFFF;
+      --light-gray: #f8f9fa;
+      --gray: #6c757d;
+    }
     body {
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: var(--light-gray);
+      color: #111;
       line-height: 1.6;
     }
     header {
-      background-color: #000;
-      color: #fff;
+      background-color: var(--black);
+      color: var(--white);
       text-align: center;
-      padding: 20px;
+      padding: 30px 15px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.8em;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin: 8px 0 0;
+      font-size: 1.3em;
+      opacity: 0.9;
     }
     .container {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
     }
-    .call-box {
-      background: #004b8d;
-      color: white;
+    .hero-call {
+      background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+      color: var(--white);
       text-align: center;
-      padding: 30px;
-      border-radius: 8px;
+      padding: 50px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+      margin-bottom: 40px;
+    }
+    .hero-call h2 {
+      margin: 0 0 15px;
+      font-size: 2.4em;
+      font-weight: 600;
+    }
+    .phone-number {
+      font-size: 4.2em;               /* Very large for visibility */
+      font-weight: 900;               /* Extra bold */
+      letter-spacing: 2px;            /* Spacing for clarity */
       margin: 20px 0;
-    }
-    .call-box h2 {
-      margin: 10px 0;
-      font-size: 2.2em;
-    }
-    .phone {
-      font-size: 3em;
-      font-weight: bold;
-      margin: 15px 0;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.4); /* Subtle shadow for pop */
       display: block;
     }
-    .phone a {
-      color: #fff;
+    .phone-number a {
+      color: var(--white);
       text-decoration: none;
     }
-    .phone a:hover {
+    .phone-number a:hover {
       text-decoration: underline;
     }
-    .highlight {
-      background: #ffcc00;
-      color: #000;
-      padding: 5px 10px;
-      border-radius: 4px;
+    .cta-text {
+      font-size: 1.6em;
+      font-weight: 500;
+      margin: 10px 0 25px;
+    }
+    .btn {
+      display: inline-block;
+      background-color: var(--white);
+      color: var(--primary-blue);
+      font-size: 1.4em;
       font-weight: bold;
+      padding: 15px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+    }
+    .btn:hover {
+      background-color: #e6e6ff;
+      transform: translateY(-3px);
+    }
+    section {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    h3 {
+      color: var(--primary-blue);
+      font-size: 1.8em;
+      margin-top: 0;
     }
     ul {
-      list-style-type: disc;
       padding-left: 25px;
+      font-size: 1.1em;
     }
     .disclaimer {
       background: #fff3cd;
       border: 1px solid #ffeeba;
-      padding: 15px;
-      margin: 20px 0;
-      border-radius: 6px;
+      padding: 20px;
+      border-radius: 10px;
       font-size: 0.95em;
+      margin: 30px 0;
+    }
+    .disclaimer a {
+      color: var(--primary-blue);
     }
     footer {
+      background: var(--black);
+      color: #aaa;
       text-align: center;
-      padding: 15px;
-      background: #000;
-      color: #ccc;
-      font-size: 0.9em;
+      padding: 25px;
+      font-size: 0.95em;
     }
-    @media (max-width: 600px) {
-      .phone { font-size: 2.2em; }
-      header h1 { font-size: 2em; }
+    footer a {
+      color: #4da6ff;
+      text-decoration: none;
+    }
+    @media (max-width: 768px) {
+      .phone-number { font-size: 3.2em; }
+      header h1 { font-size: 2.2em; }
+      .hero-call { padding: 40px 15px; }
     }
   </style>
 </head>
@@ -93,45 +144,49 @@
 
   <header>
     <h1>SiriusXM Helpline Support</h1>
-    <p>Quick Assistance for Your SiriusXM Account & Service</p>
+    <p>Fast Assistance for Your SiriusXM Subscription & Service</p>
   </header>
 
   <div class="container">
 
-    <div class="call-box">
+    <div class="hero-call">
       <h2>Sirius-XM-Helpline</h2>
-      <a href="tel:18006896881" class="phone">1-800-689-6881</a>
-      <p><strong>Call Toll-Free Number</strong><br>Live Agents Available</p>
-      <p class="highlight">Call Now to Connect with a Live Agent – Available for Help</p>
+      <a href="tel:18006896881" class="phone-number">1-800-689-6881</a>
+      <p class="cta-text">Call Toll-Free Number<br>Live Agents Available</p>
+      <p style="font-size:1.3em; margin:0 0 30px;">Call Now to Connect with a Live Agent – Help Available</p>
+      <a href="tel:18006896881" class="btn">Call Now</a>
     </div>
 
-    <h2>Get Support for SiriusXM</h2>
-    <p>Need help with your SiriusXM subscription, radio activation, billing questions, account management, technical issues, or cancellations? Our helpline provides direct access to support resources.</p>
-
-    <ul>
-      <li>Account & Subscription Help</li>
-      <li>Radio ID / ESN Activation & Refresh</li>
-      <li>Billing & Payment Inquiries</li>
-      <li>Service Issues or Troubleshooting</li>
-      <li>Managing or Canceling Your Plan</li>
-      <li>General SiriusXM Questions</li>
-    </ul>
-
-    <p><strong>Tip:</strong> Have your account number or Radio ID (ESN/RID) ready when you call for faster service.</p>
+    <section>
+      <h3>Get Support for Your SiriusXM Account</h3>
+      <p>Whether it's subscription questions, radio activation, billing, technical support, or plan changes, reach out for help.</p>
+      <ul>
+        <li>Account & Subscription Management</li>
+        <li>Radio ID / ESN Activation & Signal Refresh</li>
+        <li>Billing & Payment Questions</li>
+        <li>Troubleshooting Service Issues</li>
+        <li>Cancel or Modify Your Plan</li>
+        <li>General Inquiries</li>
+      </ul>
+      <p><strong>Pro Tip:</strong> Have your account number or Radio ID (ESN/RID) ready when calling for quicker help.</p>
+    </section>
 
     <div class="disclaimer">
-      <strong>Important:</strong> This is an independent support resource page for SiriusXM users. For official SiriusXM services, visit <a href="https://www.siriusxm.com/" target="_blank">siriusxm.com</a> or their official help center at <a href="https://www.siriusxm.com/help" target="_blank">siriusxm.com/help</a>. Hours are typically Mon–Sun 8 am – 8 pm ET (subject to change). This site is not affiliated with, owned, or operated by SiriusXM. Always verify details directly with SiriusXM.
+      <strong>Notice:</strong> This is an independent resource page to assist SiriusXM users in contacting support. It is <strong>not</strong> an official SiriusXM website or affiliated with Sirius XM Radio LLC. For official support, visit <a href="https://www.siriusxm.com/" target="_blank">siriusxm.com</a> or their help center at <a href="https://www.siriusxm.com/help" target="_blank">siriusxm.com/help</a>. Call center hours: Mon–Sun 8 am – 8 pm ET (may vary). Always confirm details directly with SiriusXM.
     </div>
 
-    <p style="text-align:center; margin-top:30px;">
-      <a href="https://www.siriusxm.com/contact-us" target="_blank" style="font-size:1.1em; color:#004b8d;">Visit Official SiriusXM Contact Page →</a>
+    <p style="text-align:center; font-size:1.2em;">
+      <a href="https://www.siriusxm.com/contact-us" target="_blank" style="color:var(--primary-blue);">→ Official SiriusXM Contact Page</a>
     </p>
 
   </div>
 
   <footer>
-    <p>&copy; 2026 SiriusXM Helpline Resource. All rights reserved. Not an official SiriusXM website.</p>
-    <p><a href="https://www.siriusxm.com/customer-agreement" target="_blank">SiriusXM Customer Agreement</a> | <a href="https://www.siriusxm.com/privacy" target="_blank">Privacy Policy (Official)</a></p>
+    <p>© 2026 SiriusXM Helpline Resource. Not affiliated with Sirius XM Radio LLC. All rights reserved.</p>
+    <p>
+      <a href="https://www.siriusxm.com/customer-agreement" target="_blank">Customer Agreement</a> | 
+      <a href="https://www.siriusxm.com/privacy" target="_blank">Privacy Policy (Official)</a>
+    </p>
   </footer>
 
 </body>
